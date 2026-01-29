@@ -57,3 +57,31 @@ It focuses on what matters to reviewers:
 ## Related repos
 - `legendary-data-pipeline` — curated public pipeline scripts
 - `legendary-utils` — reusable utilities for DB/feeds/diagnostics
+
+---
+
+## Screenshots
+
+### Home
+![Home](screenshots/01-home.png)
+
+### Category discovery
+![Category discovery](screenshots/02-category-home.png)
+
+### Browse sets
+![Browse sets](screenshots/03-browse-sets.png)
+
+### Browse cards
+![Browse cards](screenshots/04-browse-cards.png)
+
+### Card detail
+![Card detail](screenshots/05-card-detail.png)
+
+### Pricing + trends
+![Pricing + trends](screenshots/06-card-pricing.png)
+
+### Cart review
+![Cart review](screenshots/07-cart-review.png)
+
+### Stripe checkout
+![Stripe checkout](screenshots/08-stripe-checkout.png)
