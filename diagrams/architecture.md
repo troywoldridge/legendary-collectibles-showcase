@@ -41,7 +41,7 @@ flowchart TB
   subgraph SOURCES[External Sources]
     PC[PriceCharting CSV]
     SF[Scryfall API]
-    TCG[TCGplayer / Cardmarket (feeds/APIs)]
+    TCG[TCGplayer + Cardmarket feeds]
     EB[eBay (active + sold comps)]
   end
 
