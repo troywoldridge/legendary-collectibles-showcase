@@ -85,3 +85,19 @@ It focuses on what matters to reviewers:
 
 ### Stripe checkout
 ![Stripe checkout](screenshots/08-stripe-checkout.png)
+
+---
+
+## Highlights
+
+### Platform capabilities
+- Unified catalog across TCG + collectibles (cards, sets, sealed, figures)
+- Collection tracking + valuation snapshots
+- Market pricing views with currency display and trend context
+- Checkout flow with shipping estimates and Stripe payment processing
+
+### Engineering & ops
+- PostgreSQL as the source of truth for product, pricing, and valuation data
+- Scripted pipelines for imports, normalization, and rollups
+- Validations and safety checks to prevent secret leakage in public repos
+- Production monitoring and scheduled jobs (cron/PM2-style workflows)
