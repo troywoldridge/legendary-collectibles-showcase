@@ -85,7 +85,7 @@ flowchart LR
   WEB -->|Images| CF[Cloudflare Images]
   WEB -->|Checkout| STRIPE[Stripe Checkout]
 
-  subgraph Data_Pipelines[Data Pipelines (Node scripts)]
+  subgraph Data_Pipelines[Data Pipelines - Node scripts]
     INGEST[Import / Ingest] --> NORM[Normalize / Map IDs]
     NORM --> ROLLUP[Daily Rollups + Current Views]
     ROLLUP --> ALERTS[Price Alerts + Revalue Jobs]
