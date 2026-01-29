@@ -50,7 +50,7 @@ flowchart TB
     ING[Import / Ingest]
     MAP[Normalize + Map IDs]
     CONF[Confidence + Source Priority]
-    ROLL[Rollups (daily)]
+    ROLL[Rollups daily]
   end
 
   %% --- Tables ---
