@@ -105,3 +105,5 @@ Postgres is the source of truth for catalog, pricing, collection state, and snap
 Pipelines are designed to be repeatable (import → normalize → rollup → serve).
 
 Checkout is handled via Stripe, while media is delivered via Cloudflare Images.
+
+Full diagram page: [diagrams/architecture.md](diagrams/architecture.md)
