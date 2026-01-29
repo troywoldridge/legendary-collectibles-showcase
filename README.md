@@ -4,16 +4,9 @@
 ![Last Commit](https://img.shields.io/github/last-commit/troywoldridge/legendary-collectibles-showcase)
 ![License](https://img.shields.io/github/license/troywoldridge/legendary-collectibles-showcase)
 
-This repository is a **public-safe portfolio showcase** for the **Legendary Collectibles** platform.
+A **public-safe portfolio showcase** for the **Legendary Collectibles** platform: product experience, data pipelines, and the architecture behind pricing + collection valuation.
 
-It focuses on what matters to reviewers:
-- What the platform does
-- How the architecture is structured
-- How data pipelines run (pricing, imports, rollups, revaluation)
-- What problems were solved (scale, correctness, automation)
-- How the system is operated (jobs, validation, safety)
-
-> Note: This repo intentionally contains **no secrets** and excludes private integrations/details.
+> This repo intentionally contains **no secrets** and excludes private integration details.
 
 ---
 
@@ -22,41 +15,35 @@ It focuses on what matters to reviewers:
 
 ---
 
-## What I built
+## What this repo shows
+- A production-style **catalog + collection** experience (browse → detail → pricing → cart → checkout)
+- A **PostgreSQL-first** platform with snapshot/rollup tables for speed + history
+- Scripted **data pipelines** (import → normalize → rollup → alerts/revalue)
+- A real checkout flow using **Stripe**
+- Operational discipline: validations, safety checks, and repeatable runs
 
-### Core platform features
-- Catalog system for collectibles + shop products
-- Pricing pipelines (imports, normalization, rollups)
-- Collection tracking + valuation snapshots
-- Alerts (price alerts / revalue jobs)
-- Commerce integrations (Google Merchant feed tooling)
+---
 
-### Engineering focus
-- Postgres-first data model
-- Scripted ETL-style pipelines for repeatability
-- Production-safe API patterns and validations
-- Operational tooling for maintenance and diagnostics
+## Tech stack (high level)
+- **Frontend:** Next.js (App Router), React
+- **Backend:** Next.js Route Handlers (API) + Node.js scripts (pipelines)
+- **Database:** PostgreSQL (Drizzle ORM)
+- **Auth:** Clerk
+- **Payments:** Stripe
+- **Images:** Cloudflare Images
+- **Ops:** Linux server + process monitoring + scheduled jobs
 
 ---
 
 ## Documentation
-
 - **Architecture:** `docs/ARCHITECTURE.md`
 - **Data pipelines:** `docs/PIPELINES.md`
 - **Deployment/ops:** `docs/OPS.md`
 - **Security & secrets:** `docs/SECURITY.md`
 
----
-
-## Screenshots / diagrams
-- `screenshots/` — UI / admin / pipeline output screenshots
-- `diagrams/` — architecture/pipeline diagrams (simple is fine)
-
----
-
-## Related repos
+Related repos:
 - `legendary-data-pipeline` — curated public pipeline scripts
-- `legendary-utils` — reusable utilities for DB/feeds/diagnostics
+- `legendary-utils` — reusable DB/feeds/diagnostics utilities
 
 ---
 
@@ -88,27 +75,6 @@ It focuses on what matters to reviewers:
 
 ---
 
-## Highlights
-
-### Platform capabilities
-- Unified catalog across TCG + collectibles (cards, sets, sealed, figures)
-- Collection tracking + valuation snapshots
-- Market pricing views with currency display and trend context
-- Checkout flow with shipping estimates and Stripe payment processing
-
-### Engineering & ops
-- PostgreSQL as the source of truth for product, pricing, and valuation data
-- Scripted pipelines for imports, normalization, and rollups
-- Validations and safety checks to prevent secret leakage in public repos
-- Production monitoring and scheduled jobs (cron/PM2-style workflows)
-
----
-
-## Architecture diagram
-See: [diagrams/architecture.md](diagrams/architecture.md)
-
----
-
 ## Architecture
 
 ```mermaid
@@ -131,8 +97,7 @@ flowchart LR
   ALERTS --> DB
 
   DB --> WEB
-
-END_MERMAID
+  END_MERMAID
 
 ## Notes
 Postgres is the source of truth for catalog, pricing, collection state, and snapshots.
