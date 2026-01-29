@@ -42,7 +42,7 @@ flowchart TB
     PC[PriceCharting CSV]
     SF[Scryfall API]
     TCG[TCGplayer + Cardmarket feeds]
-    EB[eBay (active + sold comps)]
+    EB[eBay active + sold comps]
   end
 
   %% --- Ingest / Normalize ---
