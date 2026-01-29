@@ -97,7 +97,7 @@ flowchart LR
   ALERTS --> DB
 
   DB --> WEB
-  END_MERMAID
+  > END_MERMAID
 
 ## Notes
 Postgres is the source of truth for catalog, pricing, collection state, and snapshots.
