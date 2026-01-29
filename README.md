@@ -101,3 +101,8 @@ It focuses on what matters to reviewers:
 - Scripted pipelines for imports, normalization, and rollups
 - Validations and safety checks to prevent secret leakage in public repos
 - Production monitoring and scheduled jobs (cron/PM2-style workflows)
+
+---
+
+## Architecture diagram
+See: [diagrams/architecture.md](diagrams/architecture.md)
